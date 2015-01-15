@@ -14,3 +14,15 @@ por exemplo, uma árvóre binária com 3 nós é representadada assim:
  o
 o o
 ```
+
+Um pouco sobre como o programa joga
+-----------------------------------
+Talvez a pior parte dele é que para escolher o próximo movimento precisamos da árvore completa
+porque o nó que iremos escolher é mais leve. O cálculo do peso é assim:
+```
+w(x) = -2/pronfudidade(x) se x é uma folha que o jogador ganhou
+     = -1/profundidade(x) se x é uma folha que ninguém ganhou
+     =  1/profundidade(x) se x é uma folha que o jogador perdeu
+     =  a média do peso de todos os filhos se x é um nó interno
+```
+Basicamente estamos valorizando vitórias rápidas.
