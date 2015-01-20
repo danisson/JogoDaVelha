@@ -9,7 +9,7 @@ ou seja `nó.largura(lambda v,i: v.computarFilhos())` e ele está pronto para jo
 retornando o próximo estado: `jogarUmTurno(nó, bool)`. O restorno será `None` se o jogo acabou.  
 
 Além disso foi feito um código para imprimir na saída final uma espécie de gráfico da árvore,
-por exemplo, uma árvóre binária com 3 nós é representadada assim:
+por exemplo, uma árvore binária com 3 nós é representadada assim:
 ```
  o
 o o
