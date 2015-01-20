@@ -38,28 +38,27 @@ def jogarUmTurno(t,jogador):
 	return t.filhos[np.argmin(a)]
 
 def main():
-	t = [[0,0,0],
-		 [0,0,0],
-		 [0,0,0]]
+	t = v.TabNumpy()
+	b = True
 
-	# t = [[1,0,2],
-	# 	 [1,1,0],
-	# 	 [2,0,0]]
-	t = matrix(t)
-	b = False
+	# print t.fimDeJogo()!=0
+	# print t.calcularProximos(True)
+	# t[0] = 1;t[2]=2;t[3]=1;t[4]=1;t[6]=2;
+	# b = False
+	# print type(t)
+
 	jogo = v.VelhaNode(t,b)
 
 	print "Loading"
 	jogo.largura(lambda v,i: v.computarFilhos())
 	print "Done\n"
-	aux.matrixToPrint(jogo.valor)
 
 	while True:
 		jogo = jogarUmTurno(jogo, b)
 		if jogo is None:
 			break
 
-		aux.matrixToPrint(jogo.valor)
+		print jogo.valor,"\n"
 		b = not b
 
 if __name__ == '__main__': main()
